@@ -1,2 +1,50 @@
-# Nobetci-Eczaneler-Turkiye
-Nobetci Eczaneler-Turkiye Gizlilik Politikası
+<!doctype html>
+<html lang="tr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gizlilik Politikası – [Nöbetçi Eczaneler – Türkiye]</title>
+<style>
+ body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;max-width:820px;margin:40px auto;padding:0 16px;color:#111}
+ h1{font-size:1.8rem} h2{font-size:1.2rem;margin-top:1.6rem}
+ code{background:#f6f8fa;padding:2px 6px;border-radius:6px}
+ .muted{color:#666}
+</style></head><body>
+<h1>Gizlilik Politikası – [Nöbetçi Eczaneler – Türkiye]</h1>
+<p class="muted"><strong>Son güncelleme:</strong> [GG.AA.YYYY] · <strong>Geliştirici:</strong> [EO LABS] – <a href="mailto:[eolabs.dev@gmail.com]">[eolabs.dev@gmail.com]</a></p>
+
+<h2>1. Kapsam</h2>
+<p>[Nöbetçi Eczaneler – Türkiye], Türkiye genelinde nöbetçi eczaneleri listeleyen ve haritada gösteren bir mobil uygulamadır.</p>
+
+<h2>2. Topladığımız Veriler</h2>
+<ul>
+  <li><strong>Konum (isteğe bağlı):</strong> Yakındaki nöbetçi eczaneleri göstermek için yaklaşık/ kesin konum. Sunucularımıza kalıcı olarak kaydetmeyiz.</li>
+  <li><strong>Kullanım verileri:</strong> Firebase Analytics ile temel kullanım istatistikleri.</li>
+  <li><strong>Hata günlükleri:</strong> Firebase Crashlytics ile çökme/hata bilgileri (cihaz modeli, OS sürümü vb.).</li>
+</ul>
+<p>Sağlık durumu gibi hassas veriler <strong>toplanmaz</strong>. Uygulamada üyelik yoktur.</p>
+
+<h2>3. Kullanım Amaçları</h2>
+<ul>
+  <li>Uygulama işlevselliği (eczane bulma, harita/rota)</li>
+  <li>Performans ve kararlılık analizi</li>
+  <li>Ürün iyileştirmeleri</li>
+</ul>
+
+<h2>4. Paylaşım</h2>
+<p>Veriler yalnızca hizmet sağlayıcılarımızla paylaşılır: Google Firebase (Crashlytics/Analytics) ve harita altyapı sağlayıcısı
+[Google Maps / Mapbox / OSM]. Kişisel veriler satılmaz.</p>
+
+<h2>5. Saklama</h2>
+<p>Hata ve kullanım verileri meşru amaçlar için makul sürelerle saklanır; gerektiğinde anonimleştirilir veya silinir.</p>
+
+<h2>6. Kullanıcı Tercihleri</h2>
+<p>Konum iznini cihaz ayarlarından yönetebilirsiniz. Uygulama içi “Gizlilik” bölümünden bu politikaya erişebilirsiniz.</p>
+
+<h2>7. Çocukların Gizliliği</h2>
+<p>Uygulama 13 yaş altına yönelik değildir.</p>
+
+<h2>8. Değişiklikler</h2>
+<p>Bu politika zaman zaman güncellenebilir. Güncel sürüm bu sayfada yayımlanır.</p>
+
+<h2>9. İletişim</h2>
+<p>Sorularınız için: <a href="mailto:[eolabs.dev@gmail.com]">[eposta]</a></p>
+</body></html>
