@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Nöbetçi Eczaneler - Açık Eczane | Destek</title>
+  <meta name="description"
+    content="Nöbetçi Eczaneler - Açık Eczane uygulaması için destek, iletişim ve sık sorulan sorular." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nöbetçi Eczaneler - Açık Eczane | Destek" />
+  <meta property="og:description" content="Destek, iletişim, SSS, gizlilik ve sorumluluk reddi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="icon.jpg" />
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #11131a;
+      --text: #e8e8ea;
+      --muted: #b5b7c2;
+      --border: rgba(255, 255, 255, .10);
+      --accent: #e11d2e;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+      --radius: 18px;
+      --max: 980px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --text: #0b1220;
+        --muted: #4b5563;
+        --border: rgba(17, 24, 39, .12);
+        --shadow: 0 10px 30px rgba(2, 6, 23, .10);
+      }
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(225, 29, 46, .20), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(225, 29, 46, .12), transparent 45%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+
+    header {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 18px;
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #fff;
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: .2px;
+    }
+
+    .title p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    @media (max-width: 860px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 94%, transparent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .card h3 {
+      margin: 16px 0 8px;
+      font-size: 15px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, .03);
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+    }
+
+    ul {
+      margin: 8px 0 0 18px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--accent) 18%, transparent);
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      filter: brightness(1.05);
+    }
+
+    footer {
+      margin-top: 16px;
+      padding: 16px 4px 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .small {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hl {
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="icon" aria-label="Uygulama ikonu">
+        <!-- Logoyu repo içine icon.png adıyla koy -->
+        <img src="icon.jpg" alt="Nöbetçi Eczaneler - Açık Eczane Logo"
+          onerror="this.style.display='none'; this.parentElement.style.background='transparent';" />
+      </div>
+      <div class="title">
+        <h1>Nöbetçi Eczaneler - Açık Eczane</h1>
+        <p>Destek • İletişim • Sık Sorulan Sorular • Gizlilik</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Sol sütun -->
+      <main class="card">
+        <h2>Uygulama Hakkında</h2>
+        <p>
+          <strong>Nöbetçi Eczaneler – Açık Eczane</strong>, bulunduğunuz şehir ve ilçedeki nöbetçi (açık) eczaneleri
+          en hızlı şekilde bulmanızı sağlayan kullanışlı bir eczane bulma uygulamasıdır.
+          “Yakınımdaki açık eczane nerede?”, “En yakın nöbetçi eczane hangisi?”, “Gece açık eczane nasıl bulunur?”
+          gibi soruları kolaylaştırır; sade tasarımı, harita görünümü ve anlık liste yapısıyla doğru eczaneye kısa
+          sürede
+          ulaşmanıza yardımcı olur.
+        </p>
+        <p class="muted">
+          Uygulama, Türkiye genelindeki nöbetçi eczaneleri kapsar ve tüm şehir/ilçeler için güncel liste sunar.
+        </p>
+
+        <h3>Öne Çıkan Özellikler</h3>
+        <div>
+          <span class="badge"><span class="dot"></span> Türkiye geneli kapsam</span>
+          <span class="badge"><span class="dot"></span> Harita görünümü & rota</span>
+          <span class="badge"><span class="dot"></span> Tek dokunuşla arama</span>
+          <span class="badge"><span class="dot"></span> Konuma göre yakınlar</span>
+          <span class="badge"><span class="dot"></span> Karanlık / aydınlık tema</span>
+          <span class="badge"><span class="dot"></span> Hızlı ve hafif</span>
+        </div>
+
+        <ul>
+          <li><strong>Harita & rota:</strong> Seçtiğiniz eczaneyi haritada görüntüleyin ve tek dokunuşla navigasyon
+            başlatın.</li>
+          <li><strong>Hızlı arama:</strong> Eczaneyi arayarak açık olup olmadığını veya stok/adres bilgisini teyit
+            edebilirsiniz.</li>
+          <li><strong>Konum izni isteğe bağlı:</strong> İzin verirseniz çevrenizdeki eczaneler öne çıkarılır.</li>
+        </ul>
+
+        <h3>Nasıl Çalışır?</h3>
+        <ol>
+          <li>Şehrinizi ve ilçenizi seçin (veya konum izni verin).</li>
+          <li>Yakındaki nöbetçi eczaneleri liste veya harita görünümünde inceleyin.</li>
+          <li>İsterseniz rota başlatın, isterseniz eczaneyi arayın.</li>
+          <li>Harita üzerinden yakın bölgelerdeki eczaneleri görüntüleyin.</li>
+        </ol>
+        <p class="muted"><strong>Kullanımı tamamen ücretsizdir.</strong></p>
+
+        <h3>Gizlilik, Güvenlik ve İzinler</h3>
+        <p class="hl">
+          <strong>Konum izni isteğe bağlıdır.</strong> Konum yalnızca size en yakın eczaneleri göstermek için
+          kullanılır;
+          başka bir amaçla işlenmez veya üçüncü taraflarla paylaşılmaz.
+        </p>
+        <p class="muted">
+          Uygulamanın kararlılığını artırmak için <strong>Firebase Crashlytics</strong> ve temel
+          <strong>Analytics</strong> kullanılabilir.
+          Kişisel veriler, sağlık verileri veya kimlik bilgileri kesinlikle toplanmaz.
+        </p>
+
+        <a class="btn" href="https://egemenocakli.github.io/Nobetci-Eczaneler-Acik-Eczane" target="_blank"
+          rel="noopener">
+          Gizlilik Politikasını Görüntüle
+        </a>
+
+        <h3>Bilgilendirme ve Sorumluluk Reddi</h3>
+        <ul>
+          <li>Eczane nöbet durumları, bölgesel düzenlemelere bağlı olarak gün içinde değişiklik gösterebilir.</li>
+          <li>Yola çıkmadan önce seçtiğiniz eczaneyi telefonla arayarak teyit etmenizi öneririz.</li>
+          <li>Uygulama tıbbi tavsiye sağlamaz; teşhis/tedavi/sağlık yönlendirmesi yapmaz.</li>
+          <li>Acil durumlarda 112 Acil Çağrı gibi resmi yardım kanallarına başvurunuz.</li>
+        </ul>
+      </main>
+
+      <!-- Sağ sütun -->
+      <aside class="card">
+        <h2>Destek & İletişim</h2>
+        <p class="muted">Geri bildiriminiz uygulamanın gelişimi için çok değerli.</p>
+
+        <h3>E-posta</h3>
+        <p>
+          <a class="btn" href="mailto:eolabs.dev@gmail.com?subject=N%C3%B6bet%C3%A7i%20Eczaneler%20-%20Destek">
+            eolabs.dev@gmail.com
+          </a>
+        </p>
+        <p class="small">
+          Lütfen e-postanıza mümkünse şu bilgileri ekleyin: cihaz modeli, iOS sürümü, uygulama sürümü ve hata adımları.
+        </p>
+
+        <h3>Sık Sorulan Sorular</h3>
+        <p><strong>Konum izni zorunlu mu?</strong><br /><span class="muted">Hayır. Konum izni isteğe bağlıdır.</span>
+        </p>
+        <p><strong>Konumum kaydediliyor mu?</strong><br /><span class="muted">Hayır. Konum verisi saklanmaz veya
+            paylaşılmaz.</span></p>
+        <p><strong>Nöbet bilgisi değişebilir mi?</strong><br /><span class="muted">Evet. Yola çıkmadan önce eczaneyi
+            arayarak teyit ediniz.</span></p>
+
+        <h3>Bağlantılar</h3>
+        <ul>
+          <li><a href="https://egemenocakli.github.io/Nobetci-Eczaneler-Acik-Eczane" target="_blank"
+              rel="noopener">Gizlilik Politikası</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="yil"></span> EO LABS • Nöbetçi Eczaneler - Açık Eczane
+      <div class="small">Bu sayfa App Store / kullanıcı desteği için hazırlanmıştır.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("yil").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
